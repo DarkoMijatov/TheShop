@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Vendor.WebApi.Models
+namespace Shop.Core.Models
 {
     public class Article
     {

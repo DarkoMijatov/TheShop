@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-using Shop.WebApi.Models;
+using Shop.Core.Interfaces;
+using Shop.Core.Models;
 
 namespace Shop.WebApi.Services
 {
-    public class CachedSupplier
+    public class CachedSupplier : ICachedSupplier
     {
         private Dictionary<int, Article> _cachedArticles = new Dictionary<int, Article>();
         public bool ArticleInInventory(int id)

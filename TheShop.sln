@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.WebApi", "Shop.WebApi\Shop.WebApi.csproj", "{933FE982-F618-4E84-BEB4-C93B11266A97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vendor.WebApi", "Vendor.WebApi\Vendor.WebApi.csproj", "{E8EBFDC2-8A81-400E-BDFF-79246DDD3231}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Core", "Vendor.WebApi\Shop.Core.csproj", "{E8EBFDC2-8A81-400E-BDFF-79246DDD3231}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

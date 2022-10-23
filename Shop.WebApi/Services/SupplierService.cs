@@ -2,9 +2,9 @@
 using Shop.Core.Interfaces;
 using Shop.Core.Models;
 
-namespace Shop.WebApi.Services
+namespace Shop.Core.Services
 {
-    public class Warehouse : IWarehouse
+    public class SupplierService : ISupplierService
     {
         public bool ArticleInInventory(int id)
         {
@@ -17,7 +17,7 @@ namespace Shop.WebApi.Services
             {
                 ID = id,
                 Name_of_article = $"Article {id}",
-                ArticlePrice = new Random().Next(100, 500)
+                ArticlePrice = new Random().Next(100,500)
             };
         }
     }

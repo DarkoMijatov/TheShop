@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace Vendor.WebApi
+namespace Shop.Core
 {
     public static class WebApiConfig
     {

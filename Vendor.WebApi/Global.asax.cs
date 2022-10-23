@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
 using System.Web.Mvc;
 
-namespace Vendor.WebApi
+namespace Shop.Core
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

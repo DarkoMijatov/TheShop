@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Shop.Core.Interfaces;
+using System;
 
 namespace Shop.WebApi.Services
 {
-    public class Logger
+    public class Logger : ILogger
     {
         public void Info(string message)
         {

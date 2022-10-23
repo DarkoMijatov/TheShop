@@ -3,9 +3,9 @@ using System.Linq;
 using Shop.Core.Interfaces;
 using Shop.Core.Models;
 
-namespace Shop.WebApi.Services
+namespace Shop.Core.Services
 {
-    public class Db : IDb
+    public class DatabaseDriver : IDatabaseDriver
     {
         private List<Article> _articles = new List<Article>();
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Http;
-using Shop.WebApi.Models;
+using Shop.Core.Models;
 using Shop.WebApi.Services;
 
 namespace Shop.WebApi.Controllers
