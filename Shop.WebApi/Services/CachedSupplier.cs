@@ -21,7 +21,7 @@ namespace Shop.WebApi.Services
 
         public void SetArticle(Article article)
         {
-            _cachedArticles.Add(article.ID, article);
+            _cachedArticles.Add(article.Id, article);
         }
     }
 }

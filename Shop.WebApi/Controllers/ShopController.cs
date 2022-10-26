@@ -11,7 +11,7 @@ namespace Shop.WebApi.Controllers
         private Logger logger;
 
         private CachedSupplier CachedSupplier;
-        private Warehouse Warehouse;
+        private Shop.WebApi.Services.Warehouse Warehouse;
         private Dealer1 Dealer1;
         private Dealer2 Dealer2;
 
@@ -20,7 +20,7 @@ namespace Shop.WebApi.Controllers
             Db = new Db();
             logger = new Logger();
             CachedSupplier = new CachedSupplier();
-            Warehouse = new Warehouse();
+            Warehouse = new Shop.WebApi.Services.Warehouse();
             Dealer1 = new Dealer1();
             Dealer2 = new Dealer2();
         }
@@ -34,25 +34,25 @@ namespace Shop.WebApi.Controllers
             if (articleExists)
             {
                 tmp = CachedSupplier.GetArticle(id);
-                if (maxExpectedPrice < tmp.ArticlePrice)
+                if (maxExpectedPrice < tmp.Price)
                 {
                     articleExists = Warehouse.ArticleInInventory(id);
                     if (articleExists)
                     {
                         tmp = Warehouse.GetArticle(id);
-                        if (maxExpectedPrice < tmp.ArticlePrice)
+                        if (maxExpectedPrice < tmp.Price)
                         {
                             articleExists = Dealer1.ArticleInInventory(id);
                             if (articleExists)
                             {
                                 tmp = Dealer1.GetArticle(id);
-                                if (maxExpectedPrice < tmp.ArticlePrice)
+                                if (maxExpectedPrice < tmp.Price)
                                 {
                                     articleExists = Dealer2.ArticleInInventory(id);
                                     if (articleExists)
                                     {
                                         tmp = Dealer2.GetArticle(id);
-                                        if (maxExpectedPrice < tmp.ArticlePrice)
+                                        if (maxExpectedPrice < tmp.Price)
                                         {
                                             article = tmp;
                                         }
@@ -74,7 +74,7 @@ namespace Shop.WebApi.Controllers
         [HttpPost]
         public void BuyArticle(Article article, int buyerId)
         {
-            var id = article.ID;
+            var id = article.Id;
             if (article == null)
             {
                 throw new Exception("Could not order article");
@@ -82,9 +82,9 @@ namespace Shop.WebApi.Controllers
 
             logger.Debug("Trying to sell article with id=" + id);
 
-            article.IsSold = true;
-            article.SoldDate = DateTime.Now;
-            article.BuyerUserId = buyerId;
+            //article.IsSold = true;
+            //article.SoldDate = DateTime.Now;
+            //article.BuyerId = buyerId;
 
             try
             {

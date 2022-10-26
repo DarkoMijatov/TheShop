@@ -1,4 +1,4 @@
-﻿namespace Vendor.WebApi.Enums
+﻿namespace Shop.Core.Enums
 {
     public enum Status
     {

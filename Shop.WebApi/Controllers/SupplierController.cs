@@ -38,7 +38,7 @@ namespace Shop.WebApi.Controllers
 
         public void BuyArticle(Article article, int buyerId)
         {
-            var id = article.ID;
+            var id = article.Id;
             if (article == null)
             {
                 throw new Exception("Could not order article");
@@ -46,9 +46,9 @@ namespace Shop.WebApi.Controllers
 
             logger.Debug("Trying to sell article with id=" + id);
 
-            article.IsSold = true;
-            article.SoldDate = DateTime.Now;
-            article.BuyerUserId = buyerId;
+            //article.IsSold = true;
+            //article.SoldDate = DateTime.Now;
+            //article.BuyerId = buyerId;
 
             try
             {
